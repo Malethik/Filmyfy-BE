@@ -4,7 +4,7 @@ import createDebug from "debug";
 import Joi from "joi";
 
 import { HttpError } from "../MiddleWare/http.error.js";
-import { Repo } from "../repositorio/type.repo.js";
+import { Repo } from "../entities/type.repo.js";
 
 const debug = createDebug("W7E:base:controller");
 

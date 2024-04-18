@@ -2,8 +2,8 @@ import createDebug from "debug";
 
 import { BaseController } from "./base.controller.js";
 
-import { Repo } from "../repositorio/type.repo.js";
-import { updateSchema, createSchema } from "../entities/film.schema";
+import { Repo } from "../entities/type.repo.js";
+import { updateSchema, createSchema } from "../entities/film.schema.js";
 import { Film, FilmCreate } from "../entities/film.js";
 
 const debug = createDebug("W7E:users:controller");
