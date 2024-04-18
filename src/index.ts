@@ -1,6 +1,7 @@
 import { createServer } from "http";
 import createDebug from "debug";
 import "dotenv/config";
+
 import { createApp, startApp } from "./app.js";
 import { dbConnect } from "./tools/db.connet.js";
 
@@ -26,5 +27,5 @@ server.on("error", (error) => {
 });
 
 server.on("listening", () => {
-  debug(`server open on http://localhost:${port}`);
+  debug(`server open on port:${port}`);
 });

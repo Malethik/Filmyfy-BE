@@ -4,17 +4,17 @@ import createDebug from "debug";
 import Joi from "joi";
 
 import { HttpError } from "../MiddleWare/http.error.js";
-import { Repo } from "../entities/type.repo.js";
+import { Repo } from "../model/type.repo.js";
 
 const debug = createDebug("W7E:base:controller");
 
 export abstract class BaseController<T, C> {
   constructor(
     protected readonly repo: Repo<T, C>,
-    protected createDtoSchema: Joi.ObjectSchema<C>,
-    protected updateDtoSchema: Joi.ObjectSchema<C>
+    protected readonly createDtoSchema: Joi.ObjectSchema<C>,
+    protected readonly updateDtoSchema: Joi.ObjectSchema<C>
   ) {
-    this.repo = repo;
+    /*  This.repo = repo; */
     debug("Instancied controller");
   }
 
@@ -37,13 +37,6 @@ export abstract class BaseController<T, C> {
       next(error);
     }
 
-    try {
-      const result = await this.repo.readById(id);
-      res.status(200);
-      res.json(result);
-    } catch (error) {
-      next(error);
-    }
   }
 
   async create(req: Request, res: Response, next: NextFunction) {
@@ -59,7 +52,7 @@ export abstract class BaseController<T, C> {
     }
 
     try {
-      const result = await this.repo.create(data);
+      const result = await this.repo.create(value);
       res.status(201);
       res.json(result);
     } catch (error) {
@@ -67,7 +60,7 @@ export abstract class BaseController<T, C> {
     }
   }
 
-  patching(req: Request, res: Response, next: NextFunction) {
+  async update(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
     const data = req.body as C;
     const { error } = this.updateDtoSchema.validate(data, {
@@ -79,14 +72,14 @@ export abstract class BaseController<T, C> {
     }
 
     try {
-      const result = this.repo.update(id, data);
+      const result = await this.repo.update(id, data);
       res.json(result);
     } catch (error) {
       next(error);
     }
   }
 
-  async erase(req: Request, res: Response, next: NextFunction) {
+  async delete(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
     try {
       const result = await this.repo.delete(id);

@@ -3,20 +3,17 @@ export type User = {
   name: string;
   email: string;
   birthDate: Date;
-  password: string;
-  role: "admin" | "user" | "guest";
-  isMayor18: boolean;
+  password?: string;
+  role: "ADMIN" | "USER" | "GUEST";
+  isMayor18?: boolean;
+  comments?: Partial<Comment[]>;
 };
 
-export type UserDto = {
+export type UserCreateDto = {
   name: string;
   email: string;
-  birtdateString: string;
+  birthDateString: string;
   password: string;
 };
 
-export type UserUpdateDto = {
-  name?: string;
-  email?: string;
-  password?: string;
-};
+export type UserUpdateDto = Partial<UserCreateDto>;

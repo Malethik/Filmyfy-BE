@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
-import { NextFunction, type Request, type Response } from "express";
+/* 
+Import { NextFunction, type Request, type Response } from "express";
 import createDebug from "debug";
 import { Serie } from "@prisma/client";
 
@@ -10,7 +10,7 @@ import { SerieRepo } from "../repositorio/serie.SQL.repo.js";
 const debug = createDebug("W7E:controller:serie");
 
 export class SerieController {
-  constructor(private readonly repo: SerieRepo) {
+  constructor(protected readonly repo: SerieRepo) {
     this.repo = repo;
     debug("Instancied controller");
   }
@@ -63,7 +63,7 @@ export class SerieController {
     }
   }
 
-  patching(req: Request, res: Response, next: NextFunction) {
+  update(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
     const data = req.body as Serie;
     const { error } = updateSchema.validate(data, {
@@ -82,7 +82,7 @@ export class SerieController {
     }
   }
 
-  async erase(req: Request, res: Response, next: NextFunction) {
+  async delete(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
     try {
       const result = await this.repo.delete(id);
@@ -92,3 +92,4 @@ export class SerieController {
     }
   }
 }
+ */

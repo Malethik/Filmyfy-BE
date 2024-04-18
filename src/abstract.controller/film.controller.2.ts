@@ -2,7 +2,7 @@ import createDebug from "debug";
 
 import { BaseController } from "./base.controller.js";
 
-import { Repo } from "../entities/type.repo.js";
+import { Repo } from "../model/type.repo.js";
 import { updateSchema, createSchema } from "../entities/film.schema.js";
 import { Film, FilmCreate } from "../entities/film.js";
 

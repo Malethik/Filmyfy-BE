@@ -6,3 +6,7 @@ export type Repo<T, C> = {
   update(id: string, data: Partial<C>): Promise<T>;
   delete(id: string): Promise<T>;
 };
+
+export type WithLoginRepo<T, C> = Repo<T, C> & {
+  searchForLogin(key: "email" | "name", value: string): Promise<Partial<T>>;
+};

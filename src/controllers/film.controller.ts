@@ -1,5 +1,5 @@
-/* eslint-disable no-unused-vars */
-import { NextFunction, type Request, type Response } from "express";
+/* 
+Import { NextFunction, type Request, type Response } from "express";
 import createDebug from "debug";
 import { type Film } from "../entities/film.js";
 import { createSchema, updateSchema } from "../entities/film.schema.js";
@@ -9,7 +9,7 @@ import { FilmRepo } from "../repositorio/film.SQL.repo.js";
 const debug = createDebug("W7E:controller:film");
 
 export class FilmController {
-  constructor(private readonly repo: FilmRepo) {
+  constructor(protected readonly repo: FilmRepo) {
     this.repo = repo;
     debug("Instancied controller");
   }
@@ -62,7 +62,7 @@ export class FilmController {
     }
   }
 
-  patching(req: Request, res: Response, next: NextFunction) {
+  update(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
     const data = req.body as Film;
     const { error } = updateSchema.validate(data, {
@@ -81,7 +81,7 @@ export class FilmController {
     }
   }
 
-  async erase(req: Request, res: Response, next: NextFunction) {
+  async delete(req: Request, res: Response, next: NextFunction) {
     const { id } = req.params;
     try {
       const result = await this.repo.delete(id);
@@ -91,3 +91,4 @@ export class FilmController {
     }
   }
 }
+ */

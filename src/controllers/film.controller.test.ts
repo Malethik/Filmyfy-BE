@@ -1,4 +1,4 @@
-import { PrismaClient } from "@prisma/client";
+/* Import { PrismaClient } from "@prisma/client";
 import { FilmRepo } from "../repositorio/film.SQL.repo";
 import { FilmController } from "./film.controller";
 import { NextFunction, type Request, type Response } from "express";
@@ -48,3 +48,4 @@ describe("Given a film controller", () => {
     expect(res.status(200)).toHaveBeenCalledWith(200);
   });
 });
+ */
