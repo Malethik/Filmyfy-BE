@@ -1,0 +1,164 @@
+{
+  "film": [
+    {
+      "id": "1",
+      "titolo": "Il Padrino",
+      "anno": "1972",
+      "regista": "Francis Ford Coppola",
+      "genere": ["Crime", "Drama"],
+      "valutazione": "9.2"
+    },
+    {
+      "id": "2",
+      "titolo": "Pulp Fiction",
+      "anno": "1994",
+      "regista": "Quentin Tarantino",
+      "genere": ["Crime", "Drama"],
+      "valutazione": "8.9"
+    },
+    {
+      "id": "3",
+      "titolo": "Forrest Gump",
+      "anno": "1994",
+      "regista": "Robert Zemeckis",
+      "genere": ["Drama", "Romance"],
+      "valutazione": "8.8"
+    },
+    {
+      "id": "4",
+      "titolo": "Schindler's List",
+      "anno": "1993",
+      "regista": "Steven Spielberg",
+      "genere": ["Biography", "Drama", "History"],
+      "valutazione": "8.9"
+    },
+    {
+      "id": "5",
+      "titolo": "The Shawshank Redemption",
+      "anno": "1994",
+      "regista": "Frank Darabont",
+      "genere": ["Drama"],
+      "valutazione": "9.3"
+    },
+    {
+      "id": "6",
+      "titolo": "The Godfather: Part II",
+      "anno": "1974",
+      "regista": "Francis Ford Coppola",
+      "genere": ["Crime", "Drama"],
+      "valutazione": "9.0"
+    },
+    {
+      "id": "7",
+      "titolo": "The Dark Knight",
+      "anno": "2008",
+      "regista": "Christopher Nolan",
+      "genere": ["Action", "Crime", "Drama"],
+      "valutazione": "9.0"
+    },
+    {
+      "id": "8",
+      "titolo": "The Lord of the Rings: The Return of the King",
+      "anno": "2003",
+      "regista": "Peter Jackson",
+      "genere": ["Adventure", "Drama", "Fantasy"],
+      "valutazione": "8.9"
+    },
+    {
+      "id": "9",
+      "titolo": "Fight Club",
+      "anno": "1999",
+      "regista": "David Fincher",
+      "genere": ["Drama"],
+      "valutazione": "8.8"
+    },
+    {
+      "id": "10",
+      "titolo": "Goodfellas",
+      "anno": "1990",
+      "regista": "Martin Scorsese",
+      "genere": ["Biography", "Crime", "Drama"],
+      "valutazione": "8.7"
+    },
+    {
+      "id": "11",
+      "titolo": "The Matrix",
+      "anno": "1999",
+      "regista": "Lana Wachowski, Lilly Wachowski",
+      "genere": ["Action", "Sci-Fi"],
+      "valutazione": "8.7"
+    },
+    {
+      "id": "12",
+      "titolo": "The Silence of the Lambs",
+      "anno": "1991",
+      "regista": "Jonathan Demme",
+      "genere": ["Crime", "Drama", "Thriller"],
+      "valutazione": "8.6"
+    },
+    {
+      "id": "13",
+      "titolo": "The Lord of the Rings: The Fellowship of the Ring",
+      "anno": "2001",
+      "regista": "Peter Jackson",
+      "genere": ["Adventure", "Drama", "Fantasy"],
+      "valutazione": "8.8"
+    },
+    {
+      "id": "14",
+      "titolo": "Inception",
+      "anno": "2010",
+      "regista": "Christopher Nolan",
+      "genere": ["Action", "Adventure", "Sci-Fi"],
+      "valutazione": "8.8"
+    },
+    {
+      "id": "15",
+      "titolo": "The Departed",
+      "anno": "2006",
+      "regista": "Martin Scorsese",
+      "genere": ["Crime", "Drama", "Thriller"],
+      "valutazione": "8.5"
+    },
+    {
+      "id": "16",
+      "titolo": "Saving Private Ryan",
+      "anno": "1998",
+      "regista": "Steven Spielberg",
+      "genere": ["Drama", "War"],
+      "valutazione": "8.6"
+    },
+    {
+      "id": "17",
+      "titolo": "The Green Mile",
+      "anno": "1999",
+      "regista": "Frank Darabont",
+      "genere": ["Crime", "Drama", "Fantasy"],
+      "valutazione": "8.6"
+    },
+    {
+      "id": "18",
+      "titolo": "The Lord of the Rings: The Two Towers",
+      "anno": "2002",
+      "regista": "Peter Jackson",
+      "genere": ["Adventure", "Drama", "Fantasy"],
+      "valutazione": "8.7"
+    },
+    {
+      "id": "19",
+      "titolo": "Se7en",
+      "anno": "1995",
+      "regista": "David Fincher",
+      "genere": ["Crime", "Drama", "Mystery"],
+      "valutazione": "8.6"
+    },
+    {
+      "id": "20",
+      "titolo": "Gladiator",
+      "anno": "2000",
+      "regista": "Ridley Scott",
+      "genere": ["Action", "Adventure", "Drama"],
+      "valutazione": "8.5"
+    }
+  ]
+}
