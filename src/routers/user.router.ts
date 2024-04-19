@@ -7,7 +7,7 @@ import {
 } from "express";
 import createDebug from "debug";
 
-import { UserController } from "../abstract.controller/user.controller";
+import { UserController } from "../controllers/user.controller";
 import { AuthInterceptor } from "../MiddleWare/auth.interceptor";
 
 const debug = createDebug("W7E:router:film");

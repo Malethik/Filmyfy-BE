@@ -1,8 +1,6 @@
 import { Router as createRouter } from "express";
 import createDebug from "debug";
-import { SerieController2 } from "../abstract.controller/serie.controller.2";
-
-
+import { SerieController2 } from "../controllers/serie.controller.2";
 
 const debug = createDebug("W7E:router:film");
 

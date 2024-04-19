@@ -1,4 +1,3 @@
-
 import express from "express";
 import { Express } from "express";
 import morgan from "morgan";
@@ -10,12 +9,12 @@ import { PrismaClient } from "@prisma/client";
 import { FilmRepo } from "./repositorio/film.SQL.repo.js";
 import { AuthInterceptor } from "./MiddleWare/auth.interceptor.js";
 import { SerieRepo } from "./repositorio/serie.SQL.repo.js";
-import { SerieController2 } from "./abstract.controller/serie.controller.2.js";
+import { SerieController2 } from "./controllers/serie.controller.2.js";
 import { SerieRouter } from "./routers/serie.router.js";
 import { UserRouter } from "./routers/user.router.js";
-import { FilmController2 } from "./abstract.controller/film.controller.2.js";
+import { FilmController2 } from "./controllers/film.controller.2.js";
 import { UserRepo } from "./repositorio/user.sql.repo.js";
-import { UserController } from "./abstract.controller/user.controller.js";
+import { UserController } from "./controllers/user.controller.js";
 
 const debug = createDebug("W7E:app");
 

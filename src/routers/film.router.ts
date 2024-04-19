@@ -1,6 +1,6 @@
 import { Router as createRouter } from "express";
 import createDebug from "debug";
-import { FilmController2 } from "../abstract.controller/film.controller.2";
+import { FilmController2 } from "../controllers/film.controller.2";
 
 const debug = createDebug("W7E:router:film");
 

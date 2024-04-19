@@ -1,5 +1,6 @@
 import { SerieRouter } from "./serie.router";
-import { SerieController } from "../controllers/serie.controller";
+
+import { SerieController2 } from "../controllers/serie.controller.2";
 
 describe("given a instanc of class SerieRouter", () => {
   const controller = {
@@ -8,7 +9,7 @@ describe("given a instanc of class SerieRouter", () => {
     create: jest.fn(),
     patching: jest.fn(),
     erase: jest.fn(),
-  } as unknown as SerieController;
+  } as unknown as SerieController2;
   const router = new SerieRouter(controller);
   test("The it should be instance of the class SerieRouter", () => {
     expect(router).toBeInstanceOf(SerieRouter);
