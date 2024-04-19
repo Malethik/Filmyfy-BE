@@ -25,7 +25,7 @@ export class UserRouter {
 
     this.router.post(
       "/login",
-      authInterceptor.checkLogin.bind(authInterceptor),
+      authInterceptor.authentication.bind(authInterceptor),
       this.userLoginOk.bind(this)
     );
 
