@@ -1,13 +1,14 @@
 /* eslint-disable no-unused-vars */
-import { Serie, PrismaClient } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import createDebug from "debug";
 
 import { HttpError } from "../MiddleWare/http.error.js";
-import { SerieCreate, SerieUpdateDto } from "../entities/series.js";
+import { Serie, SerieCreate, SerieUpdateDto } from "../entities/series.js";
+import { Repo } from "../model/type.repo.js";
 
 const debug = createDebug("W7E:repository:SQL");
 
-export class SerieRepo {
+export class SerieRepo implements Repo<SerieCreate, SerieCreate> {
   constructor(public prisma: PrismaClient) {
     debug("Instanciend fil repo");
   }
@@ -22,14 +23,6 @@ export class SerieRepo {
   async readById(id: string) {
     const serie = await this.prisma.serie.findUnique({
       where: { id },
-      select: {
-        id: true,
-        titolo: true,
-        regista: true,
-        anno: true,
-        genere: true,
-        valutazione: true,
-      },
     });
     if (!serie) {
       throw new HttpError(404, "Not found", `Serie ${id} not found!`);

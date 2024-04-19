@@ -13,3 +13,4 @@ export type SerieUpdateDto = {
   genere?: string[];
   valutazione?: string;
 };
+export type Serie = {};
